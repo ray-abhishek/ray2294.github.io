@@ -5,7 +5,7 @@ Graphical visualisation of Covid-19 Cases using ChartJS
 
 
 ### Features : 
-1. Adding upto 5 Countries for Comparision 
+1. Add upto 5 Countries for Comparision 
 2. Comparision via Recovered/Confirmed/Deceased cases 
 3. Cards to display overall stats of Countries selected.
 4. Prefetch List of Countries
