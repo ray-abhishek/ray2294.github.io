@@ -1,0 +1,49 @@
+@import url('./base.css');
+@import url('./basic-grid.css');
+.wi-75{
+    width:85%;
+}
+div.container-fluid div.basic-grid input{
+    background-color: rgb(22, 47, 74);
+    color:white;
+    font-family:'Quantico';
+}
+div.container div.basic-grid datalist{
+    background-color: rgb(22, 47, 74);
+}
+div.container-fluid div.basic-grid .btn{
+    background-color: rgb(12, 24, 37);
+    color:rgb(10, 150, 5);
+    font-family:'Quantico';
+    font-size:1.5rem;
+}
+h1.display-4{
+    color: red;
+}
+div.container-fluid div.basic-grid .btn:hover{
+    color:rgb(14, 248, 6);
+}
+#chart-container{
+    min-height:600px;
+}
+#cards p{
+    font-family:'Quantico';
+    font-size: 1.7rem;
+}
+#cards h5{
+    font-size: 3.25rem;
+}
+#cards small{
+    font-size: 1rem;
+}
+footer{
+    font-family:'Quantico';
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+@media screen and (max-width: 768px) {
+    .wi-75{
+        width:100%;
+    }
+}
