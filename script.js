@@ -12,7 +12,7 @@ window.addEventListener('load',()=>{
         j++
         if(j<=5)
         addCountry(j)
-        else alert("it's sorry that it can only track 5 countries!")
+        else alert("it's sorry, but it can only track 5 countries!(for now :)")
     })
     fillDataList()
 })
@@ -51,11 +51,14 @@ const fetchData = async (target)=>{
     let correctDate
     let type = $('#type').val()
     let typeData
+   // alert(type)
     let url = 'https://pomber.github.io/covid19/timeseries.json'
     await fetch(url)
     .then(res=>res.json())
     .then(res=>{
             
+        
+       //     console.log(target, " is target")
         Array.from(target).forEach((elem)=>{
         if(elem.name == 'Country' && elem.value != '')
         {
@@ -71,7 +74,7 @@ const fetchData = async (target)=>{
                     case 'Recovered': typeData = recovered; break;
                     case 'Deceased': typeData = deaths; break;
                 }
-
+           //     console.log(formatDate(date), " is date")
                 correctDate = formatDate(date)
                 mainDB[country].push({x:correctDate, y: Number(typeData)})
                 dateLabels[country].push(correctDate)
@@ -115,7 +118,11 @@ const fetchData = async (target)=>{
     })
     .catch((err)=>{
         alert('Country name might be incorrect.')
+     //   alert(err.statusText)
     })
+
+//    await console.log(longest, " is longest")
+//    await console.log(graphDB, " is graphDB")
     drawGraph(graphDB, longest, type)
     
 }
